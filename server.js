@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(methodOverride('_method'))
 const port = 3100
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
 	console.log(`Listening on port ${port}!!`)
 })
 
